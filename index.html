@@ -118,7 +118,7 @@
             font-size: 0.95rem;
             letter-spacing: 0.5px;
             font-weight: 700;
-            white-space: nowrap; /* Impede a quebra de linha das palavras */
+            white-space: nowrap;
             transition: color 0.3s;
         }
 
@@ -140,8 +140,9 @@
             border-radius: 4px;
             border: none;
             cursor: pointer;
-            white-space: nowrap; /* Impede quebra no botão */
+            white-space: nowrap;
             flex-shrink: 0;
+            text-align: center;
         }
 
         .btn-gold:hover {
@@ -160,6 +161,7 @@
             font-weight: 800;
             transition: all 0.3s ease;
             border-radius: 4px;
+            text-align: center;
         }
 
         .btn-outline-gold:hover {
@@ -474,7 +476,7 @@
         footer {
             background: #000000;
             color: #ffffff;
-            padding: 3rem 2rem;
+            padding: 3rem 2rem 2rem 2rem;
             text-align: center;
             border-top: 2px solid var(--gold-primary);
         }
@@ -490,6 +492,21 @@
             font-size: 1rem;
             color: #ffffff;
             font-weight: 500;
+        }
+
+        .credits {
+            margin-top: 2rem;
+            padding-top: 1.2rem;
+            border-top: 1px solid rgba(212, 175, 55, 0.2);
+            font-size: 0.85rem;
+            color: #888888;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .credits strong {
+            color: #ffd700;
+            font-weight: 700;
         }
 
         /* Botão Flutuante WhatsApp */
@@ -541,6 +558,12 @@
             }
             .form-group.full-width {
                 grid-column: span 1;
+            }
+            .hero-actions {
+                flex-direction: column;
+            }
+            .hero-actions a {
+                width: 100%;
             }
         }
     </style>
@@ -733,6 +756,10 @@
         <div class="footer-logo">INOVA ODONTOLOGIA</div>
         <p class="footer-text">Dra. Nieli Ribeiro Gomes • Cirurgiã Dentista</p>
         <p class="footer-text" style="margin-top: 0.5rem; color: #aaaaaa;">Av. Capitão Francisco César, 912 - Barueri - SP</p>
+        
+        <div class="credits">
+            Site por <strong>Life Digital Studio</strong>
+        </div>
     </footer>
 
     <a href="https://wa.me/5511983360204?text=Olá,%20gostaria%20de%20agendar" class="whatsapp-vip" target="_blank">
