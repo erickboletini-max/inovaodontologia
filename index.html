@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dra. Nieli Ribeiro Gomes | Inova Odontologia - Barueri</title>
+    <meta name="description" content="Inova Odontologia por Dra. Nieli Ribeiro Gomes. Cirurgiã Dentista, Implantodontia e Clínica Geral em Barueri - SP. Agende sua consulta!">
+    
+    <!-- Google Fonts: Montserrat + Playfair Display -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --gold-primary: #b8860b;
+            --gold-gradient: linear-gradient(135deg, #d4af37 0%, #aa7c11 100%);
+            --white-pure: #ffffff;
+            --text-dark: #000000;
+            --border-gold: rgba(184, 134, 11, 0.6);
+            --shadow-gold: 0 10px 25px rgba(184, 134, 11, 0.25);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        /* Papel de Parede Dourado Visível com Textura Geométrica de Luxo */
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f7eedb;
+            background-image: 
+                radial-gradient(circle at 50% 50%, rgba(212, 175, 55, 0.15), transparent 70%),
+                linear-gradient(135deg, rgba(184, 134, 11, 0.12) 25%, transparent 25%), 
+                linear-gradient(225deg, rgba(184, 134, 11, 0.12) 25%, transparent 25%), 
+                linear-gradient(45deg, rgba(184, 134, 11, 0.12) 25%, transparent 25%), 
+                linear-gradient(315deg, rgba(184, 134, 11, 0.12) 25%, #f5e7c8 25%);
+            background-position: 0 0, 0 0, 25px 0, 25px -25px, 0px 25px;
+            background-size: 100% 100%, 50px 50px, 50px 50px, 50px 50px, 50px 50px;
+            background-attachment: fixed;
+            color: var(--text-dark);
+            line-height: 1.8;
+            font-size: 18px;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            color: #000000;
+        }
+
+        /* Banner Superior */
+        .top-banner {
+            background: #000000;
+            color: #ffd700;
+            text-align: center;
+            padding: 0.8rem 1rem;
+            font-size: 0.95rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            border-bottom: 2px solid var(--gold-primary);
+        }
+
+        /* Header Navigation */
+        header {
+            position: sticky;
+            top: 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 2px solid var(--border-gold);
+            z-index: 1000;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+
+        .nav-container {
+            max-width: 1300px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.2rem 2rem;
+        }
+
+        .logo {
+            text-decoration: none;
+        }
+
+        .logo-title {
+            font-size: 1.8rem;
+            letter-spacing: 2px;
+            font-weight: 800;
+            color: #000000;
+        }
+
+        .logo-subtitle {
+            font-size: 1.05rem;
+            letter-spacing: 2px;
+            color: var(--gold-primary);
+            font-weight: 700;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: #000000;
+            font-size: 1rem;
+            letter-spacing: 1px;
+            font-weight: 700;
+            transition: color 0.3s;
+        }
+
+        .nav-link:hover {
+            color: var(--gold-primary);
+        }
+
+        .btn-gold {
+            background: var(--gold-gradient);
+            color: #ffffff;
+            padding: 1rem 2.2rem;
+            text-decoration: none;
+            font-size: 1rem;
+            letter-spacing: 1px;
+            font-weight: 800;
+            box-shadow: var(--shadow-gold);
+            transition: all 0.3s ease;
+            display: inline-block;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-gold:hover {
+            transform: translateY(-2px);
+            filter: brightness(1.1);
+        }
+
+        .btn-outline-gold {
+            background: #ffffff;
+            color: #000000;
+            border: 2px solid var(--gold-primary);
+            padding: 1rem 2.2rem;
+            text-decoration: none;
+            font-size: 1rem;
+            letter-spacing: 1px;
+            font-weight: 800;
+            transition: all 0.3s ease;
+            border-radius: 4px;
+        }
+
+        .btn-outline-gold:hover {
+            background: var(--gold-primary);
+            color: #ffffff;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 5rem 2rem;
+        }
+
+        .hero-container {
+            max-width: 1300px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 4rem;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.92);
+            padding: 3rem;
+            border: 2px solid var(--border-gold);
+            box-shadow: var(--shadow-gold);
+        }
+
+        .hero-tag {
+            font-size: 1.1rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--gold-primary);
+            margin-bottom: 1rem;
+            font-weight: 800;
+        }
+
+        .hero h1 {
+            font-size: 3.2rem;
+            line-height: 1.2;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            color: #000000;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: #111111;
+            margin-bottom: 2.5rem;
+            font-weight: 500;
+            line-height: 1.8;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .hero-image-frame {
+            border: 3px solid var(--gold-primary);
+            padding: 10px;
+            background: #ffffff;
+            box-shadow: 0 15px 35px rgba(184, 134, 11, 0.2);
+        }
+
+        .hero-image-frame img {
+            width: 100%;
+            display: block;
+        }
+
+        /* Seção Sobre a Dra. Nieli */
+        .about-section {
+            padding: 6rem 2rem;
+        }
+
+        .about-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1.1fr;
+            gap: 4rem;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 3.5rem;
+            border: 2px solid var(--border-gold);
+            box-shadow: var(--shadow-gold);
+        }
+
+        .doctor-photo-frame {
+            border: 3px solid var(--gold-primary);
+            padding: 10px;
+            background: #ffffff;
+            box-shadow: var(--shadow-gold);
+        }
+
+        .doctor-photo-frame img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 2px;
+        }
+
+        .section-subtitle {
+            font-size: 1.1rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--gold-primary);
+            margin-bottom: 0.8rem;
+            font-weight: 800;
+        }
+
+        .section-title {
+            font-size: 2.8rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+            color: #000000;
+        }
+
+        .about-text {
+            font-size: 1.15rem;
+            color: #111111;
+            margin-bottom: 1.5rem;
+            font-weight: 500;
+        }
+
+        .badges-list {
+            list-style: none;
+            margin-top: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+        }
+
+        .badges-list li {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #000000;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* Seção de Especialidades */
+        .services-section {
+            padding: 6rem 2rem;
+            max-width: 1300px;
+            margin: 0 auto;
+        }
+
+        .services-header {
+            text-align: center;
+            margin-bottom: 4rem;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 2rem;
+            border: 2px solid var(--border-gold);
+            display: inline-block;
+            width: 100%;
+            box-shadow: var(--shadow-gold);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .service-card {
+            background: rgba(255, 255, 255, 0.95);
+            border: 2px solid var(--border-gold);
+            padding: 3rem 2rem;
+            box-shadow: var(--shadow-gold);
+            transition: transform 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-card h3 {
+            font-size: 1.6rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+            color: #000000;
+        }
+
+        .service-card p {
+            font-size: 1.1rem;
+            color: #222222;
+            font-weight: 500;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Seção de Pré-Agendamento */
+        .booking-section {
+            padding: 6rem 2rem;
+        }
+
+        .booking-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.96);
+            padding: 3.5rem 2.5rem;
+            border: 2px solid var(--border-gold);
+            box-shadow: var(--shadow-gold);
+        }
+
+        .booking-form {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .form-group.full-width {
+            grid-column: span 2;
+        }
+
+        .form-group label {
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: #000000;
+            letter-spacing: 0.5px;
+        }
+
+        .form-group input, .form-group select, .form-group textarea {
+            width: 100%;
+            padding: 1rem;
+            border: 1px solid var(--border-gold);
+            font-size: 1rem;
+            font-family: 'Montserrat', sans-serif;
+            background: #ffffff;
+            color: #000000;
+            border-radius: 4px;
+            outline: none;
+        }
+
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+            border-color: var(--gold-primary);
+            box-shadow: 0 0 5px rgba(184, 134, 11, 0.4);
+        }
+
+        /* Avaliações */
+        .reviews-section {
+            padding: 5rem 2rem;
+            text-align: center;
+            max-width: 1100px;
+            margin: 0 auto 4rem auto;
+            background: rgba(255, 255, 255, 0.95);
+            border: 2px solid var(--border-gold);
+            box-shadow: var(--shadow-gold);
+        }
+
+        .review-quote {
+            font-size: 1.7rem;
+            font-weight: 600;
+            color: #000000;
+            max-width: 900px;
+            margin: 0 auto 1.5rem auto;
+            line-height: 1.5;
+        }
+
+        .review-author {
+            font-size: 1.1rem;
+            font-weight: 800;
+            color: var(--gold-primary);
+        }
+
+        /* Localização & Agendamento */
+        .contact-section {
+            padding: 3rem 2rem 6rem 2rem;
+            max-width: 1300px;
+            margin: 0 auto;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .contact-info {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 3rem;
+            border: 2px solid var(--border-gold);
+            box-shadow: var(--shadow-gold);
+        }
+
+        .contact-item {
+            margin-bottom: 2rem;
+        }
+
+        .contact-item h4 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            color: var(--gold-primary);
+            font-weight: 700;
+        }
+
+        .contact-item p {
+            color: #000000;
+            font-size: 1.15rem;
+            font-weight: 600;
+        }
+
+        /* Footer */
+        footer {
+            background: #000000;
+            color: #ffffff;
+            padding: 3rem 2rem;
+            text-align: center;
+            border-top: 2px solid var(--gold-primary);
+        }
+
+        .footer-logo {
+            font-size: 2rem;
+            color: #ffd700;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-text {
+            font-size: 1rem;
+            color: #ffffff;
+            font-weight: 500;
+        }
+
+        /* Botão Flutuante WhatsApp */
+        .whatsapp-vip {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            background: #25d366;
+            color: #ffffff;
+            padding: 1.1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 1.05rem;
+            font-weight: 800;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+            z-index: 1000;
+        }
+
+        @media (max-width: 992px) {
+            .hero-container, .about-grid, .contact-grid {
+                grid-template-columns: 1fr;
+                padding: 1.5rem;
+            }
+            .hero h1 {
+                font-size: 2.3rem;
+            }
+            .nav-menu {
+                display: none;
+            }
+            .booking-form {
+                grid-template-columns: 1fr;
+            }
+            .form-group.full-width {
+                grid-column: span 1;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="top-banner">
+        INOVA ODONTOLOGIA • BARUERI - SP
+    </div>
+
+    <header>
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <div class="logo-title">INOVA ODONTOLOGIA</div>
+                <div class="logo-subtitle">Dra. Nieli Ribeiro Gomes</div>
+            </a>
+            
+            <ul class="nav-menu">
+                <li><a href="#inicio" class="nav-link">Início</a></li>
+                <li><a href="#sobre" class="nav-link">A Doutora</a></li>
+                <li><a href="#especialidades" class="nav-link">Especialidades</a></li>
+                <li><a href="#agendamento" class="nav-link">Pré-Agendamento</a></li>
+                <li><a href="#contato" class="nav-link">Contato & Localização</a></li>
+            </ul>
+
+            <a href="#agendamento" class="btn-gold">AGENDAR CONSULTA</a>
+        </div>
+    </header>
+
+    <section class="hero" id="inicio">
+        <div class="hero-container">
+            <div>
+                <div class="hero-tag">Cirurgiã Dentista • Implantodontia</div>
+                <h1>Excelência e inovação para o seu sorriso.</h1>
+                <p>Na <strong>Inova Odontologia</strong>, oferecemos tratamentos avançados com foco no seu bem-estar, estética dental e reabilitação oral de alta performance.</p>
+                <div class="hero-actions">
+                    <a href="#agendamento" class="btn-gold">MARCAR AVALIAÇÃO</a>
+                    <a href="#especialidades" class="btn-outline-gold">NOSSA ATUAÇÃO</a>
+                </div>
+            </div>
+
+            <div class="hero-image-frame">
+                <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&q=80&w=800" alt="Inova Odontologia - Consultório Moderno em Barueri">
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Sobre a Dra. Nieli -->
+    <section class="about-section" id="sobre">
+        <div class="about-grid">
+            <div class="doctor-photo-frame">
+                <!-- Nome do arquivo ajustado exatamente para doutora.jpg -->
+                <img src="doutora.jpg" alt="Dra. Nieli Ribeiro Gomes - Cirurgiã Dentista">
+            </div>
+            <div>
+                <div class="section-subtitle">A Responsável Técnica</div>
+                <h2 class="section-title">Dra. Nieli Ribeiro Gomes</h2>
+                <p class="about-text">A <strong>Dra. Nieli Ribeiro Gomes</strong> é a cirurgiã dentista responsável técnica pela Inova Odontologia em Barueri, unindo tecnologia moderna e atendimento humanizado para garantir saúde e estética oral superior aos seus pacientes.</p>
+                
+                <ul class="badges-list">
+                    <li>🦷 <strong>Cirurgiã Dentista</strong></li>
+                    <li>🦷 <strong>Especialista em Implantodontia</strong></li>
+                    <li>🦷 <strong>Atendimento em Clínica Geral</strong></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="services-section" id="especialidades">
+        <div class="services-header">
+            <div class="section-subtitle">Áreas de Atuação</div>
+            <h2 class="section-title">Tratamentos na Inova Odontologia</h2>
+        </div>
+
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>Implantodontia</h3>
+                <p>Reabilitação oral com implantes dentários modernos para devolver a segurança, estética e mastigação perfeita.</p>
+            </div>
+
+            <div class="service-card">
+                <h3>Clínica Geral</h3>
+                <p>Diagnóstico, limpezas profiláticas, restaurações e tratamentos preventivos para toda a família.</p>
+            </div>
+
+            <div class="service-card">
+                <h3>Cirurgia Dentária</h3>
+                <p>Procedimentos cirúrgicos seguros e humanizados realizados por especialista com total conforto.</p>
+            </div>
+
+            <div class="service-card">
+                <h3>Odontologia Estética</h3>
+                <p>Clareamento dental, lentes e facetas para transformar a estética e harmonia do seu sorriso.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Pré-Agendamento Online -->
+    <section class="booking-section" id="agendamento">
+        <div class="booking-container">
+            <div style="text-align: center;">
+                <div class="section-subtitle">Conveniência e Agilidade</div>
+                <h2 class="section-title" style="font-size: 2.4rem;">Pré-Agende sua Consulta</h2>
+                <p style="color: #444; font-size: 1.05rem;">Preencha os dados e o período de sua preferência. Nossa atendente entrará em contato via WhatsApp para confirmar os dias e horários disponíveis.</p>
+            </div>
+
+            <form class="booking-form" onsubmit="enviarPreAgendamento(event)">
+                <div class="form-group">
+                    <label for="nome">Nome Completo *</label>
+                    <input type="text" id="nome" placeholder="Seu nome" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="telefone">Telefone / WhatsApp *</label>
+                    <input type="tel" id="telefone" placeholder="(11) 99999-9999" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="servico">Tratamento Desejado *</label>
+                    <select id="servico" required>
+                        <option value="" disabled selected>Selecione uma opção</option>
+                        <option value="Avaliação Geral">Avaliação Geral / Consulta</option>
+                        <option value="Implantodontia">Implantes Dentários</option>
+                        <option value="Clínica Geral / Limpeza">Clínica Geral / Limpeza</option>
+                        <option value="Cirurgia Dentária">Cirurgia Dentária</option>
+                        <option value="Estética Dental / Clareamento">Estética Dental / Lentes</option>
+                        <option value="Outro Tratamento">Outro Tratamento</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="periodo">Período de Preferência *</label>
+                    <select id="periodo" required>
+                        <option value="" disabled selected>Selecione o período</option>
+                        <option value="Manhã (08h às 12h)">Manhã (08h às 12h)</option>
+                        <option value="Tarde (13h às 18h)">Tarde (13h às 18h)</option>
+                        <option value="Primeiro horário disponível">Primeiro horário disponível</option>
+                    </select>
+                </div>
+
+                <div class="form-group full-width">
+                    <label for="mensagem">Observações (Opcional)</label>
+                    <input type="text" id="mensagem" placeholder="Ex: Prefiro atendimento às quintas-feiras...">
+                </div>
+
+                <div class="form-group full-width" style="margin-top: 1rem;">
+                    <button type="submit" class="btn-gold" style="width: 100%; font-size: 1.1rem; padding: 1.2rem;">
+                        📅 ENVIAR PRÉ-AGENDAMENTO VIA WHATSAPP
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <section class="reviews-section">
+        <div class="review-quote">"Atendimento humanizado, ambiente seguro e extrema qualidade nos tratamentos. A referência em odontologia em Barueri."</div>
+        <div class="review-author">★ ★ ★ ★ ★ — Inova Odontologia • Barueri - SP</div>
+    </section>
+
+    <section class="contact-section" id="contato">
+        <div class="contact-grid">
+            <div class="contact-info">
+                <div class="section-subtitle">Onde Estamos</div>
+                <h2 class="section-title" style="font-size: 2.2rem;">Venha Conhecer Nosso Consultório</h2>
+                
+                <div class="contact-item">
+                    <h4>Endereço</h4>
+                    <p>Av. Capitão Francisco César, 912<br>Barueri - SP</p>
+                </div>
+
+                <div class="contact-item">
+                    <h4>WhatsApp Direto</h4>
+                    <p>(11) 98336-0204</p>
+                </div>
+
+                <div class="contact-item">
+                    <h4>Telefone Fixo</h4>
+                    <p>(11) 2680-4655</p>
+                </div>
+
+                <a href="https://wa.me/5511983360204?text=Olá,%20gostaria%20de%20agendar%20uma%20consulta" target="_blank" class="btn-gold" style="width: 100%; text-align: center;">FALAR NO WHATSAPP DIRETO</a>
+            </div>
+
+            <div style="border: 2px solid var(--gold-primary); padding: 5px; background: #fff; box-shadow: var(--shadow-gold);">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3658.736342898952!2d-46.8876402!3d-23.5055531!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cf03258fa49bf1%3A0x7d0fa0bb5bb29e00!2sAv.%20Capit%C3%A3o%20Francisco%20C%C3%A9sar%2C%20912%20-%20Vila%20Engenho%20Novo%2C%20Barueri%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1700000000000" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-logo">INOVA ODONTOLOGIA</div>
+        <p class="footer-text">Dra. Nieli Ribeiro Gomes • Cirurgiã Dentista</p>
+        <p class="footer-text" style="margin-top: 0.5rem; color: #aaaaaa;">Av. Capitão Francisco César, 912 - Barueri - SP</p>
+    </footer>
+
+    <a href="https://wa.me/5511983360204?text=Olá,%20gostaria%20de%20agendar" class="whatsapp-vip" target="_blank">
+        💬 Agendar pelo WhatsApp
+    </a>
+
+    <!-- Script de Envio via WhatsApp -->
+    <script>
+        function enviarPreAgendamento(event) {
+            event.preventDefault();
+            
+            var nome = document.getElementById('nome').value;
+            var telefone = document.getElementById('telefone').value;
+            var servico = document.getElementById('servico').value;
+            var periodo = document.getElementById('periodo').value;
+            var mensagem = document.getElementById('mensagem').value;
+
+            var texto = "*SOLICITAÇÃO DE PRÉ-AGENDAMENTO - INOVA ODONTOLOGIA*\n\n" +
+                        "*Nome:* " + nome + "\n" +
+                        "*Telefone:* " + telefone + "\n" +
+                        "*Tratamento Desejado:* " + servico + "\n" +
+                        "*Período de Preferência:* " + periodo + "\n" +
+                        (mensagem ? "*Observações:* " + mensagem : "");
+
+            var urlWhatsApp = "https://wa.me/5511983360204?text=" + encodeURIComponent(texto);
+            window.open(urlWhatsApp, '_blank');
+        }
+    </script>
+
+</body>
+</html>
