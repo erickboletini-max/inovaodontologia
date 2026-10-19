@@ -63,11 +63,11 @@
             border-bottom: 2px solid var(--gold-primary);
         }
 
-        /* Header Navigation */
+        /* Header Navigation Corrigido */
         header {
             position: sticky;
             top: 0;
-            background: rgba(255, 255, 255, 0.95);
+            background: rgba(255, 255, 255, 0.97);
             backdrop-filter: blur(10px);
             border-bottom: 2px solid var(--border-gold);
             z-index: 1000;
@@ -75,28 +75,32 @@
         }
 
         .nav-container {
-            max-width: 1300px;
+            max-width: 1350px;
             margin: 0 auto;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 1.2rem 2rem;
+            padding: 1rem 1.5rem;
+            gap: 1rem;
         }
 
         .logo {
             text-decoration: none;
+            white-space: nowrap;
+            flex-shrink: 0;
         }
 
         .logo-title {
-            font-size: 1.8rem;
-            letter-spacing: 2px;
+            font-size: 1.5rem;
+            letter-spacing: 1.5px;
             font-weight: 800;
             color: #000000;
+            line-height: 1.2;
         }
 
         .logo-subtitle {
-            font-size: 1.05rem;
-            letter-spacing: 2px;
+            font-size: 0.95rem;
+            letter-spacing: 1px;
             color: var(--gold-primary);
             font-weight: 700;
         }
@@ -104,15 +108,17 @@
         .nav-menu {
             display: flex;
             list-style: none;
-            gap: 2rem;
+            gap: 1.5rem;
+            align-items: center;
         }
 
         .nav-link {
             text-decoration: none;
             color: #000000;
-            font-size: 1rem;
-            letter-spacing: 1px;
+            font-size: 0.95rem;
+            letter-spacing: 0.5px;
             font-weight: 700;
+            white-space: nowrap; /* Impede a quebra de linha das palavras */
             transition: color 0.3s;
         }
 
@@ -123,9 +129,9 @@
         .btn-gold {
             background: var(--gold-gradient);
             color: #ffffff;
-            padding: 1rem 2.2rem;
+            padding: 0.8rem 1.5rem;
             text-decoration: none;
-            font-size: 1rem;
+            font-size: 0.9rem;
             letter-spacing: 1px;
             font-weight: 800;
             box-shadow: var(--shadow-gold);
@@ -134,6 +140,8 @@
             border-radius: 4px;
             border: none;
             cursor: pointer;
+            white-space: nowrap; /* Impede quebra no botão */
+            flex-shrink: 0;
         }
 
         .btn-gold:hover {
@@ -500,6 +508,23 @@
             z-index: 1000;
         }
 
+        /* Ajustes Responsivos do Menu */
+        @media (max-width: 1180px) {
+            .nav-menu {
+                gap: 0.8rem;
+            }
+            .nav-link {
+                font-size: 0.85rem;
+            }
+            .logo-title {
+                font-size: 1.3rem;
+            }
+            .btn-gold {
+                padding: 0.7rem 1.1rem;
+                font-size: 0.82rem;
+            }
+        }
+
         @media (max-width: 992px) {
             .hero-container, .about-grid, .contact-grid {
                 grid-template-columns: 1fr;
@@ -552,7 +577,7 @@
                 <h1>Excelência e inovação para o seu sorriso.</h1>
                 <p>Na <strong>Inova Odontologia</strong>, oferecemos tratamentos avançados com foco no seu bem-estar, estética dental e reabilitação oral de alta performance.</p>
                 <div class="hero-actions">
-                    <a href="#agendamento" class="btn-gold">MARCAR AVALIAÇÃO</a>
+                    <a href="#agendamento" class="btn-gold" style="font-size: 1rem; padding: 1rem 2.2rem;">MARCAR AVALIAÇÃO</a>
                     <a href="#especialidades" class="btn-outline-gold">NOSSA ATUAÇÃO</a>
                 </div>
             </div>
@@ -567,7 +592,6 @@
     <section class="about-section" id="sobre">
         <div class="about-grid">
             <div class="doctor-photo-frame">
-                <!-- Nome do arquivo ajustado exatamente para doutora.jpg -->
                 <img src="doutora.jpg" alt="Dra. Nieli Ribeiro Gomes - Cirurgiã Dentista">
             </div>
             <div>
@@ -696,7 +720,7 @@
                     <p>(11) 2680-4655</p>
                 </div>
 
-                <a href="https://wa.me/5511983360204?text=Olá,%20gostaria%20de%20agendar%20uma%20consulta" target="_blank" class="btn-gold" style="width: 100%; text-align: center;">FALAR NO WHATSAPP DIRETO</a>
+                <a href="https://wa.me/5511983360204?text=Olá,%20gostaria%20de%20agendar%20uma%20consulta" target="_blank" class="btn-gold" style="width: 100%; text-align: center; font-size: 1rem; padding: 1rem 2.2rem;">FALAR NO WHATSAPP DIRETO</a>
             </div>
 
             <div style="border: 2px solid var(--gold-primary); padding: 5px; background: #fff; box-shadow: var(--shadow-gold);">
